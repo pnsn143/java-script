@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Events</title>
+    <style>
+        body{
+            font-family: "comic sans ms", sans-serif;
+        }
+        div{
+            background-color: lightgreen;
+            padding: 10px;
+            width: 400px;
+        }
+        input {
+            border: 2px solid lightgreen;
+        }
+        span{
+            color: red;
+        }
+        #results-div{
+            background-color: orangered;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>JS Event Handling</h2>
+<div>
+    <form>
+        <label>user name </label>
+        <input type="text" id="username">
+        <span id="userText"></span>
+        <br>
+        <label>password</label>
+        <input type="password" id="password">
+        <span id="passText"></span>
+        <br>
+        <button type="button" onclick="getValues()">Get Values</button>
+    </form>
+</div>
+
+     <h2>JS Events Listeners</h2>
+       <div>
+           <form>
+               <label>Enter Text</label>
+               <input type="text" id="userInput">
+           </form>
+       </div>
+
+      <div id="results-div">
+          <h1 id="userInputText"></h1>
+      </div>
+
+      <script>
+          function getValues() {
+              var username = document.querySelector('#username').value;
+              var password = document.querySelector('#password').value;
+              if (username === 'surya' && password === 'password'){
+                  document.querySelector('#username').style.borderColor = 'green';
+                  document.querySelector('#password').style.borderColor = 'green';
+              }
+              else {
+                  document.querySelector('#username').style.borderColor = 'red';
+                  document.querySelector('#password').style.borderColor = 'red';
+                  document.querySelector('#userText').innerHTML = "userName doesn't Exists";
+              }
+
+          }
+
+          //Event Listeners
+          //Get the Element
+          var userInput = document.querySelector('#userInput');
+          // Hookup an event
+          userInput.addEventListener('keyup' , display);
+          // write function logic
+          function display() {
+              var userValue = userInput.value;
+              document.querySelector('#userInputText').innerHTML = userValue;
+              if (userValue === 'surya'){
+                  userInput.style.borderColor = 'green';
+              }
+              else {
+                  userInput.style.borderColor = 'red';
+              }
+
+          }
+      </script>
+</body>
+</html>

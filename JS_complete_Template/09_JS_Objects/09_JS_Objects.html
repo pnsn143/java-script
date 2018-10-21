@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Objects Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+
+<script>
+
+    //creation of objects
+      var obj = {};
+
+    //Adding properties to objects
+        obj.name = 'john';
+        obj.age = 35;
+        obj.desg = 'manager';
+        console.log(obj);
+    //Retrieving properties of objects
+          var emp_name = obj.name;
+          console.log(emp_name);
+    //declaring Object Literals
+           var employee = {
+               name : 'williams',
+               age : 45,
+               designation : 'sales maneger'
+           };
+           console.log(employee);
+    //Access existing properties
+             var emp_desg = employee.designation;
+             console.log(emp_desg);
+    //Access Non Existing Properties
+             var emp_salary = employee.salary;
+             console.log(emp_salary);
+    // Usage of Dot and [] notations
+            // var empName = employee.name;
+               var empName = employee["name"];
+             console.log(empName);
+    // use of [] notation where dot is not used for invalid identifiers
+              var car ={
+                  name :'benz' ,
+                  year : 2018 ,
+                  100 : 'black'
+              };
+
+              var prop = car['100'];
+              console.log(prop);
+
+
+    // use of [] notation for accessing dynamic properties
+                     var student = {
+                         name : 'rajan',
+                         age : 25,
+                         course : 'engineering'
+                     };
+
+                     var dyna_prop = "course";
+                     var output = "the dynamic prop value is : " + student[dyna_prop];
+                     console.log(output);
+                     document.getElementById('display').innerHTML = output;
+
+    // nested Objects creation
+               var student1 = {
+                   name : 'pnsn',
+                   age : 23,
+                   course : 'software engineering',
+                   address : {
+                       city : 'ongole',
+                       state : 'andhra',
+                       country : 'India'
+                   }
+               };
+               console.log(student1);
+    //Accessing them using dot notation
+              var pnsn_city = student1.address.city;
+              console.log(pnsn_city);
+    //Accessing them using mix of dot and [] notation
+            var pnsn_state = student1.address["state"];
+            console.log(pnsn_state);
+    // Add some properties to nested object and access them
+
+                student1.address.street = 'pappubazar';
+                console.log(student1);
+    // === operator demo for objects (if pointing to same location in memory)
+               delete student1.address.street;
+               console.log(student1);
+    // deleting a property from an object
+                      var emp1 = {
+                          name : 'vivek' ,
+                          age : 35 ,
+                          desg : 'team leader'
+                      };
+                      var emp2 = emp1;
+
+                      if (emp1 === emp2){
+                          console.log("both are equal");
+                          document.getElementById('display').innerHTML = "both are equal";
+                      }
+                      else {
+                          console.log("both are not equal");
+                          document.getElementById('display').innerHTML = "both are not equal";
+                      }
+
+
+</script>
+</html>

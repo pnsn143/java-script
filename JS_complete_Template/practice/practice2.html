@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <style>
+        body{
+            font-family: "comic sans ms", sans-serif;
+        }
+        hi{
+            text-align: center;
+            color: green;
+        }
+        .image{
+            border: 2px solid green;
+            width: 300px;
+            float: left;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+
+
+        }
+        .image:hover{
+            cursor: pointer;
+            box-shadow: 5px 5px 15px green;
+        }
+        .image img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .desc{
+            text-align: center;
+            padding: 10px;
+        }
+        button{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        div h2{
+            background-color: green;
+        }
+
+         .div h3{
+            background-color: green;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<h1>Image Gallery</h1>
+
+<div class="image" onclick="image1()" id="image1" >
+    <img src="img/gallery1.jpeg" width="600" height="400">
+    <div class="desc" >Image 1</div>
+</div>
+
+<div class="image" onclick="image2()" id="image2">
+    <img src="img/gallery2.jpeg" width="600" height="400">
+    <div class="desc">Image 2</div>
+</div>
+
+<div class="image" onclick="image3()" id="image3">
+    <img src="img/gallery3.jpeg" width="600" height="400">
+    <div class="desc">Image 3</div>
+</div>
+
+<div class="image" onclick="image4()" id="image4">
+    <img src="img/gallery1.jpeg" width="600" height="400">
+    <div class="desc">Image 4</div>
+</div>
+
+<div class="image" onclick="image5()" id="image5">
+    <img src="img/gallery2.jpeg" width="600" height="400">
+    <div class="desc">Image 5</div>
+</div>
+
+<div class="image" onclick="image6()" id="image6">
+    <img src="img/gallery3.jpeg" width="600" height="400">
+    <div class="desc">Image 6</div>
+</div>
+
+<div class="image" onclick="image7()" id="image7">
+    <img src="img/gallery2.jpeg" width="600" height="400">
+    <div class="desc">Image 7</div>
+</div>
+
+<div class="image" onclick="image8()" id="image8">
+    <img src="img/gallery3.jpeg" width="600" height="400">
+    <div class="desc">Image 8</div>
+</div>
+
+<div class="image" onclick="image9()" id="image9">
+    <img src="img/gallery2.jpeg" width="600" height="400">
+    <div class="desc">Image 9</div>
+</div>
+
+<div class="image" onclick="image10()" id="image10">
+    <img src="img/gallery3.jpeg" width="600" height="400">
+    <div class="desc">Image 10</div>
+</div>
+
+<div class="image" onclick="image11()" id="image11">
+    <img src="img/gallery2.jpeg" width="600" height="400">
+    <div class="desc">Image 11</div>
+</div>
+
+<div class="image" onclick="image12()" id="image12">
+    <a href="https://www.google.com/?gws_rd=ssl">
+        <img src="img/gallery3.jpeg" width="600" height="400"></a>
+    <div class="desc">Image 12</div>
+</div>
+<div>
+    <img src="../img/water.jpg" width="300" height="200" id="img-1">
+    <br>
+    <button onclick="image1()">image 1</button>
+    <button onclick="image2()" >image 2</button>
+    <button onclick="image3()">image 3</button>
+    <button onclick="image4()">image 4</button>
+    <button onclick="image5()">image 5</button>
+    <button onclick="image6()">image 6</button>
+    <button onclick="image7()">image 7</button>
+    <button onclick="image8()">image 8</button>
+    <button onclick="image9()">image 9</button>
+    <button onclick="image10()">image 10</button>
+    <button onclick="image11()">image 11</button>
+    <button onclick="image12()">image 12</button>
+
+</div>
+
+<div>
+    <h2 id="display">  </h2>
+</div>
+
+<div class="div">
+    <h3 id = "h3"></h3>
+
+    <h3 id="h31"></h3>
+
+    <h3 id="h32"></h3>
+
+    <h3 id="h33"></h3>
+
+    <h3 id="h34"></h3>
+
+    <h3 id="h35"></h3>
+
+    <h3 id="h36"></h3>
+
+    <h3 id="h37"></h3>
+
+    <h3 id="h38"></h3>
+
+    <h3 id="h39"></h3>
+
+    <h3 id="h310"></h3>
+
+    <h3 id="h311"></h3>
+
+</div>
+
+<script src="practice2.js"></script>
+</body>
+</html>
